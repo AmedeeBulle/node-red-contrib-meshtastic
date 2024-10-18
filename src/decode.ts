@@ -95,9 +95,8 @@ const nodeInit: NodeInitializer = (red): void => {
         }
 
         console.debug("Outputting payload from decode node");
-        send({
-          payload: out,
-        });
+        msg.payload = out
+        send(msg);
       }
 
       done();
